@@ -1,0 +1,17 @@
+%button-style {
+    font-family: "Open Sans";
+    font-weight: 700;
+    line-height: 433.333%;
+    text-decoration: none;
+    background-color: var(--green-block);
+    color: var(--white-text);
+    border: 1px var(--green-border) solid;
+    border-radius: 15px 0;
+    padding: 4px 18px;
+    transition: all .15s;
+
+    &:hover {
+        background-color: var(--white-block);
+        color: var(--green-text);
+    }
+}
