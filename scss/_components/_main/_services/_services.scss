@@ -1,21 +1,19 @@
 .services {
     margin-top: 200px;
+    position: relative;
+
+    .decore {
+        position: absolute;
+        right: 0;
+        top: 100%;
+    }
 
     h3 {
-        color: var(--grey-text);
-        font-family: "Poppins", Tahoma, Verdana, sans-serif;
-        font-size: 1.25em;
-        font-weight: 600;
-        line-height: 140%;
-        letter-spacing: -0.2px;
+        @extend %h3-style;
     }
 
     h2 {
-        color: var(--black-text);
-        font-family: "Poppins", Tahoma, Verdana, sans-serif;
-        font-size: 3em;
-        font-weight: 500;
-        line-height: 162.5%;
+        @extend %h2-style;
         margin-bottom: 30px;
     }
 
@@ -27,7 +25,6 @@
         font-family: "Open Sans", Tahoma, Verdana, sans-serif;
         font-size: 1em;
         font-weight: 700;
-        margin-bottom: 90px;
 
         &__button {
             width: 20%;
@@ -39,7 +36,8 @@
             transition: all .15s;
             cursor: pointer;
 
-            &:hover, &__active {
+            &:hover,
+            &__active {
                 color: var(--green-text);
                 background-color: var(--white-block);
             }
@@ -51,6 +49,7 @@
         justify-content: space-around;
         flex-wrap: wrap;
         gap: 10px;
+        margin-top: 90px;
 
         &__post {
             padding: 10px;
@@ -59,7 +58,7 @@
             background-color: var(--white-block);
             box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.14);
             padding: 25px;
-            font-family: "Open Sans";
+            font-family: "Open Sans", Tahoma, Verdana, sans-serif;
             transition: all .15s;
             cursor: pointer;
 

@@ -1,0 +1,53 @@
+.about {
+    margin-top: 400px;
+    position: relative;
+
+    .decore{
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+
+    &__wrapper {
+
+        h3 {
+            @extend %h3-style;
+        }
+
+        h2 {
+            @extend %h2-style;
+            line-height: 118.75%;
+            margin: 30px 0;
+        }
+
+        p {
+            @extend %p-style;
+        }
+
+        a {
+            @extend %button-style;
+        }
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 150px;
+
+        &__content {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        &__image {
+            @extend %image-block-style;
+
+            img {
+                @extend %image-style;
+                top: 30px;
+                left: 30px;
+                border-radius: 140px 0px;
+            }
+        }
+    }
+}
