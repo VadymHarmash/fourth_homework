@@ -1,5 +1,12 @@
 .project {
     margin: 50px 0;
+    position: relative;
+
+    .decore {
+        position: absolute;
+        top: 90%;
+        left: 0;
+    }
 
     &__wrapper {
         display: flex;
@@ -46,7 +53,8 @@
         width: 100%;
         height: 615px;
         position: relative;
-        img{
+
+        img {
             position: absolute;
             width: 100%;
             height: 100%;

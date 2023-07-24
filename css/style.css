@@ -67,6 +67,7 @@ html {
   --brown-block: #CAA892;
   --white-block: #FFFFFF;
   --green-block: #37806B;
+  --black-border: #212121;
   --brown-border: #CAA892;
   --white-border: #FFFFFF;
   --green-border: #37806B;
@@ -75,50 +76,50 @@ html {
 
 @font-face {
   font-family: "Raleway";
-  src: url("../../fonts/Raleway-Medium.eot");
-  src: url("../../fonts/Raleway-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Raleway-Medium.woff2") format("woff2"), url("../../fonts/Raleway-Medium.woff") format("woff"), url("../../fonts/Raleway-Medium.svg#Raleway-Medium") format("svg");
+  src: url("../fonts/Raleway-Medium.eot");
+  src: url("../fonts/Raleway-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway-Medium.woff") format("woff"), url("../fonts/Raleway-Medium.svg#Raleway-Medium") format("svg");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Basic Sans SF";
-  src: url("../../fonts/BasicSansSFBold.eot");
-  src: url("../../fonts/BasicSansSFBold.eot?#iefix") format("embedded-opentype"), url("../../fonts/BasicSansSFBold.woff2") format("woff2"), url("../../fonts/BasicSansSFBold.woff") format("woff"), url("../../fonts/BasicSansSFBold.svg#BasicSansSFBold") format("svg");
+  src: url("../fonts/BasicSansSFBold.eot");
+  src: url("../fonts/BasicSansSFBold.eot?#iefix") format("embedded-opentype"), url("../fonts/BasicSansSFBold.woff2") format("woff2"), url("../fonts/BasicSansSFBold.woff") format("woff"), url("../fonts/BasicSansSFBold.svg#BasicSansSFBold") format("svg");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../../fonts/Poppins-SemiBold.eot");
-  src: url("../../fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../../fonts/Poppins-SemiBold.woff") format("woff"), url("../../fonts/Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
+  src: url("../fonts/Poppins-SemiBold.eot");
+  src: url("../fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff"), url("../fonts/Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: "Poppins";
-  src: url("../../fonts/Poppins-Medium.eot");
-  src: url("../../fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Poppins-Medium.woff2") format("woff2"), url("../../fonts/Poppins-Medium.woff") format("woff"), url("../../fonts/Poppins-Medium.svg#Poppins-Medium") format("svg");
+  src: url("../fonts/Poppins-Medium.eot");
+  src: url("../fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.svg#Poppins-Medium") format("svg");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Bold.eot");
-  src: url("../../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans-Bold.woff2") format("woff2"), url("../../fonts/OpenSans-Bold.woff") format("woff"), url("../../fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
+  src: url("../fonts/OpenSans-Bold.eot");
+  src: url("../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-SemiBold.eot");
-  src: url("../../fonts/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../../fonts/OpenSans-SemiBold.woff") format("woff"), url("../../fonts/OpenSans-SemiBold.svg#OpenSans-SemiBold") format("svg");
+  src: url("../fonts/OpenSans-SemiBold.eot");
+  src: url("../fonts/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSans-SemiBold.svg#OpenSans-SemiBold") format("svg");
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Regular.eot");
-  src: url("../../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans-Regular.woff2") format("woff2"), url("../../fonts/OpenSans-Regular.woff") format("woff"), url("../../fonts/OpenSans-Regular.svg#OpenSans-Regular") format("svg");
+  src: url("../fonts/OpenSans-Regular.eot");
+  src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.svg#OpenSans-Regular") format("svg");
   font-weight: 400;
   font-display: swap;
 }
@@ -210,6 +211,12 @@ html {
 
 .project {
   margin: 50px 0;
+  position: relative;
+}
+.project .decore {
+  position: absolute;
+  top: 90%;
+  left: 0;
 }
 .project__wrapper {
   display: flex;
@@ -252,4 +259,80 @@ html {
   height: 100%;
   bottom: 30px;
   right: 30px;
+}
+
+.services {
+  margin-top: 200px;
+}
+.services h3 {
+  color: var(--grey-text);
+  font-family: "Poppins", Tahoma, Verdana, sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.2px;
+}
+.services h2 {
+  color: var(--black-text);
+  font-family: "Poppins", Tahoma, Verdana, sans-serif;
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 162.5%;
+  margin-bottom: 30px;
+}
+.services__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  font-family: "Open Sans", Tahoma, Verdana, sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 90px;
+}
+.services__buttons__button {
+  width: 20%;
+  padding: 5px 10px;
+  background-color: var(--green-block);
+  color: var(--white-text);
+  border: 5px var(--green-border) solid;
+  border-radius: 20px;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.services__buttons__button:hover, .services__buttons__button__active {
+  color: var(--green-text);
+  background-color: var(--white-block);
+}
+.services__item-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.services__item-wrapper__post {
+  padding: 10px;
+  width: 20%;
+  border-radius: 60px 0px;
+  background-color: var(--white-block);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.14);
+  padding: 25px;
+  font-family: "Open Sans";
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.services__item-wrapper__post .title {
+  color: var(--black-text);
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.services__item-wrapper__post .description {
+  color: var(--grey-text);
+  font-size: 1.125em;
+}
+.services__item-wrapper__post:hover {
+  background-color: var(--brown-block);
+}
+.services__item-wrapper__post:hover p {
+  color: var(--white-text);
 }/*# sourceMappingURL=style.css.map */

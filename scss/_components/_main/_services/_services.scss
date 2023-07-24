@@ -1,0 +1,86 @@
+.services {
+    margin-top: 200px;
+
+    h3 {
+        color: var(--grey-text);
+        font-family: "Poppins", Tahoma, Verdana, sans-serif;
+        font-size: 1.25em;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: -0.2px;
+    }
+
+    h2 {
+        color: var(--black-text);
+        font-family: "Poppins", Tahoma, Verdana, sans-serif;
+        font-size: 3em;
+        font-weight: 500;
+        line-height: 162.5%;
+        margin-bottom: 30px;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        font-family: "Open Sans", Tahoma, Verdana, sans-serif;
+        font-size: 1em;
+        font-weight: 700;
+        margin-bottom: 90px;
+
+        &__button {
+            width: 20%;
+            padding: 5px 10px;
+            background-color: var(--green-block);
+            color: var(--white-text);
+            border: 5px var(--green-border) solid;
+            border-radius: 20px;
+            transition: all .15s;
+            cursor: pointer;
+
+            &:hover, &__active {
+                color: var(--green-text);
+                background-color: var(--white-block);
+            }
+        }
+    }
+
+    &__item-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        &__post {
+            padding: 10px;
+            width: 20%;
+            border-radius: 60px 0px;
+            background-color: var(--white-block);
+            box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.14);
+            padding: 25px;
+            font-family: "Open Sans";
+            transition: all .15s;
+            cursor: pointer;
+
+            .title {
+                color: var(--black-text);
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+
+            .description {
+                color: var(--grey-text);
+                font-size: 1.125em;
+            }
+
+            &:hover {
+                background-color: var(--brown-block);
+
+                p {
+                    color: var(--white-text);
+                }
+            }
+        }
+    }
+}
