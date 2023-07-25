@@ -1,0 +1,112 @@
+.clients {
+    margin-top: 130px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            @extend %h3-style;
+        }
+
+        h2 {
+            @extend %h2-style;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        align-self: flex-end;
+        margin-right: 80px;
+
+        button {
+            font-family: "Open Sans", Tahoma, Verdana, sans-serif;
+            background-color: var(--white-block);
+            color: var(--grey-text);
+            font-weight: 700;
+            border: none;
+            border-radius: 50%;
+            box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            transition: all .15s;
+
+            &:hover {
+                background-color: var(--green-block);
+                color: var(--white-text);
+            }
+        }
+    }
+
+    &__slider {
+        width: 92%;
+        overflow: hidden;
+        margin: 100px 0 250px;
+
+        &__wrapper {
+            display: flex;
+            gap: 80px;
+            transition: transform 0.3s ease-in-out;
+
+            &__item:nth-child(even),
+            &__item:nth-child(odd) {
+                &::before {
+                    content: '';
+                    width: 130px;
+                    height: 130px;
+                    position: absolute;
+                    top: 25%;
+                    right: 92%;
+                    border-radius: 35px 0px;
+                }
+            }
+
+            &__item:nth-child(even) {
+                &::before {
+                    background-image: url(../images/woman.png);
+                }
+            }
+
+            &__item:nth-child(odd) {
+                &::before {
+                    background-image: url(../images/man.png);
+                }
+            }
+
+            &__item {
+                flex: 0 0 47%;
+                border-radius: 70px 0px;
+                box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
+                padding: 50px 40px 60px 110px;
+                transform: scale(0.8);
+                position: relative;
+
+                p {
+                    @extend %p-style;
+                }
+
+                .author {
+                    display: flex;
+                    align-items: baseline;
+                    gap: 5px;
+                    font-family: "Open Sans", Tahoma, Verdana, sans-serif;
+
+                    h4 {
+                        color: var(--black-text);
+                        font-size: 1.5em;
+                        font-weight: 700;
+                    }
+
+                    span {
+                        color: var(--grey-text);
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
