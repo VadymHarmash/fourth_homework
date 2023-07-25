@@ -1,0 +1,101 @@
+.blog {
+    background-color: var(--grey-background);
+    margin-top: 250px;
+    padding: 100px 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            @extend %h2-style;
+            width: 55%;
+            text-align: center;
+            margin-top: 90px;
+        }
+
+        p {
+            @extend %p-style;
+        }
+    }
+
+    &__statistics {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        margin: 90px 0 0;
+
+        h2 {
+            margin: 0;
+        }
+
+        &__card {
+            border-radius: 40px 0px;
+            box-shadow: 0px 13px 16px 0px rgba(0, 0, 0, 0.10);
+            padding: 40px;
+            transition: all .15s;
+            cursor: pointer;
+
+            &:nth-child(1),
+            &:nth-child(5) {
+                margin-bottom: 100px;
+            }
+
+            &:nth-child(3),
+            &:nth-child(7) {
+                margin-top: 100px;
+            }
+
+            &:hover {
+                background-color: var(--brown-block);
+
+                h2, p {
+                    color: var(--white-text);
+                }
+            }
+        }
+
+        &__line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .line {
+                background-color: var(--light-grey-block);
+                width: 2px;
+                height: 50%;
+                position: absolute;
+            }
+
+            .top-line,
+            .bottom-line {
+                width: 50%;
+                height: 2px;
+            }
+
+            .top-line {
+                top: 25%;
+                left: 0;
+            }
+
+            .bottom-line {
+                bottom: 25%;
+                right: 0;
+            }
+
+            &:nth-child(4) {
+                .top-line {
+                    top: 75%;
+                    left: 0;
+                }
+
+                .bottom-line {
+                    bottom: 75%;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
