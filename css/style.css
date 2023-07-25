@@ -338,7 +338,7 @@ html {
 .services__item-wrapper__post:hover {
   background-color: var(--brown-block);
 }
-.services__item-wrapper__post:hover p {
+.services__item-wrapper__post:hover h2, .services__item-wrapper__post:hover p {
   color: var(--white-text);
 }
 
@@ -408,6 +408,12 @@ html {
   background-color: var(--grey-background);
   margin-top: 250px;
   padding: 100px 0;
+  position: relative;
+}
+.blog .decore {
+  position: absolute;
+  top: 90%;
+  left: 0;
 }
 .blog__wrapper {
   display: flex;

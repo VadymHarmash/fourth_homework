@@ -18,7 +18,7 @@ async function getData() {
 function renderHTML(posts) {
     return posts.map(({ title, body }) => `
         <div class='services__item-wrapper__post'>
-            <p class='title'>TITLE: ${title}</p>
+            <h2 class='title'>TITLE: ${title}</h2>
             <p class='description'>CONTENT: ${body}</p>
         </div>
     `).join('')

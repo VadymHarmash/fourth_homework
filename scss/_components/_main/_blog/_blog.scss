@@ -2,6 +2,13 @@
     background-color: var(--grey-background);
     margin-top: 250px;
     padding: 100px 0;
+    position: relative;
+
+    .decore{
+        position: absolute;
+        top: 90%;
+        left: 0;
+    }
 
     &__wrapper {
         display: flex;
