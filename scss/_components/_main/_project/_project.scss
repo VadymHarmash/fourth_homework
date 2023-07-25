@@ -12,11 +12,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 40px;
+        gap: 100px;
     }
 
     &__content {
-
         h3 {
             @extend %h3-style;
         }
