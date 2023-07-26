@@ -1,0 +1,95 @@
+.blog {
+    padding: 90px 0 130px;
+    background-color: var(--grey-background);
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            @extend %h3-style;
+        }
+
+        h2 {
+            @extend %h2-style;
+            margin: 20px 0 80px;
+        }
+    }
+
+    &__articles {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+
+        &__article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h4 {
+                margin: 40px 0 20px 45px;
+                color: var(--black-text);
+                font-family: "Open Sans", Tahoma, Verdana, sans-serif;
+                font-size: 1.875em;
+                font-weight: 600;
+                line-height: 28px;
+            }
+
+            p {
+                @extend %p-style;
+                margin-bottom: 45px;
+            }
+
+            a {
+                @extend %button-style;
+                line-height: 155.556%;
+            }
+
+            h4,
+            p {
+                opacity: 0;
+                transition: all 1s;
+            }
+
+            h4,
+            p,
+            a {
+                align-self: start;
+                margin-left: 45px;
+            }
+
+            &__image {
+                @extend %image-block-style;
+                transform: scale(0.9);
+                height: 386px;
+                transition: all .3s;
+                transform: scale(.8);
+                &:hover {
+                    transform: scale(.9);
+                }
+
+                img {
+                    @extend %image-style;
+                    border-radius: 140px 0px;
+                    bottom: 30px;
+                    right: 30px;
+                    opacity: 0;
+                    transition: opacity 1s, transform .3s;
+                }
+            }
+
+            &:hover {
+                h4,
+                p {
+                    opacity: 1;
+                }
+
+                &__image {
+                    transform: scale(.9);
+                }
+            }
+        }
+    }
+}

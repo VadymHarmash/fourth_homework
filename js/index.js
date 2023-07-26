@@ -5,6 +5,12 @@ window.onscroll = function () {
     document.querySelector(".header__progress-bar__progressed").style.width = scrolled + "%"
 }
 
+window.addEventListener('scroll', function () {
+    let images = document.querySelectorAll('.article-image')
+    let scrollLevel = document.body.scrollTop || document.documentElement.scrollTop
+    scrollLevel > 5100 && scrollLevel < 5900 ? images.forEach(image => image.style.opacity = 1) : images.forEach(image => image.style.opacity = 0)
+})
+
 const buttons = document.querySelector('.services__buttons')
 const wrapper = document.querySelector('.services__item-wrapper')
 
@@ -31,8 +37,8 @@ function renderHTML(posts) {
     const architecturePosts = posts.filter(post => post.id >= 4 && post.id <= 7).map(post => ({ title: post.title, body: post.body }))
     const planningPosts = posts.filter(post => post.id >= 8).map(post => ({ title: post.title, body: post.body }))
     const allPosts = [
-        interiorPosts[interiorPosts.length - 1], 
-        architecturePosts[architecturePosts.length - 1], 
+        interiorPosts[interiorPosts.length - 1],
+        architecturePosts[architecturePosts.length - 1],
         planningPosts[planningPosts.length - 1]
     ]
 
@@ -57,7 +63,7 @@ function renderHTML(posts) {
             if (currentButton.classList.contains('architecture')) postsHTML = renderHTML(architecturePosts)
             if (currentButton.classList.contains('planning')) postsHTML = renderHTML(planningPosts)
             if (currentButton.classList.contains('all-posts')) postsHTML = renderHTML(allPosts)
-            
+
             wrapper.innerHTML = postsHTML
         }
     })
