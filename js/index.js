@@ -7,7 +7,7 @@ setTimeout(() => {
     setTimeout(() => {
         loadingPage.style.display = 'none'
     }, 300)
-}, 5000)
+}, 1000)
 
 
 // Події при скроллі
@@ -25,7 +25,8 @@ window.onscroll = function () {
 window.addEventListener('scroll', function () {
     let images = document.querySelectorAll('.article-image')
     let scrollLevel = document.body.scrollTop || document.documentElement.scrollTop
-    scrollLevel > 5100 && scrollLevel < 5900 ? images.forEach(image => image.style.opacity = 1) : images.forEach(image => image.style.opacity = 0)
+    scrollLevel > 5200 && scrollLevel < 6000 ? images.forEach(image => image.style.opacity = 1) : images.forEach(image => image.style.opacity = 0)
+    console.log(scrollLevel)
 })
 
 

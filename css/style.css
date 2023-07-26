@@ -35,6 +35,11 @@ body {
   margin: 0 auto;
 }
 
+.anchor {
+  height: 150px;
+  width: 100%;
+}
+
 @media screen and (min-width: 1250.01px) and (max-width: 1440px) {
   .container {
     max-width: 1200px;
@@ -295,7 +300,7 @@ html {
 }
 
 .project {
-  margin: 50px 0;
+  margin: 0 0 50px;
   position: relative;
 }
 .project .decore {
@@ -326,7 +331,7 @@ html {
 }
 
 .services {
-  margin-top: 200px;
+  margin-top: 50px;
   position: relative;
 }
 .services .decore {
@@ -395,7 +400,7 @@ html {
 }
 
 .about {
-  margin-top: 400px;
+  margin-top: 250px;
   position: relative;
 }
 .about .decore {
@@ -476,7 +481,6 @@ html {
 .stats__wrapper h2 {
   width: 55%;
   text-align: center;
-  margin-top: 90px;
 }
 .stats__statistics {
   display: grid;
@@ -639,7 +643,7 @@ html {
 }
 
 .blog {
-  padding: 90px 0 130px;
+  padding: 0 0 130px;
   background-color: var(--grey-background);
 }
 .blog__wrapper {

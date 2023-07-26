@@ -7,6 +7,11 @@ body {
     margin: 0 auto;
 }
 
+.anchor{
+    height: 150px;
+    width: 100%;
+}
+
 @media screen and (min-width: 1250.01px) and (max-width: 1440px) {
     .container {
         max-width: 1200px;
