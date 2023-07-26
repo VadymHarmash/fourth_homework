@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -23,6 +24,10 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+body {
+  overflow-y: hidden;
 }
 
 .container {
@@ -62,6 +67,7 @@ html {
   --brown-text: #CAA892;
   --white-text: #FFFFFF;
   --green-text: #37806B;
+  --orange-text: #B0855B;
   --black-block: #212121;
   --light-grey-block: #E0E0E0;
   --grey-block: #646464;
@@ -175,6 +181,52 @@ html {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+.loading {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white-block);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.loading__round {
+  width: 20px;
+  height: 20px;
+  background-color: var(--grey-block);
+  border-radius: 50%;
+  animation: loading 1s infinite ease-in-out;
+}
+.loading :nth-child(2) {
+  animation-delay: 0.1s;
+}
+.loading :nth-child(3) {
+  animation-delay: 0.2s;
+}
+.loading :nth-child(4) {
+  animation-delay: 0.3s;
+}
+.loading :nth-child(5) {
+  animation-delay: 0.4s;
 }
 
 .header {
@@ -510,7 +562,7 @@ html {
   align-items: center;
   gap: 20px;
   align-self: flex-end;
-  margin-right: 80px;
+  margin-right: 120px;
 }
 .clients__buttons button {
   font-family: "Open Sans", Tahoma, Verdana, sans-serif;
@@ -545,6 +597,16 @@ html {
   top: 25%;
   right: 92%;
   border-radius: 35px 0px;
+}
+.clients__slider__wrapper__item:nth-child(even)::after, .clients__slider__wrapper__item:nth-child(odd)::after {
+  content: "”";
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  color: var(--orange-text);
+  font-family: "Basic Sans SF", Tahoma, Verdana, sans-serif;
+  font-size: 6em;
+  font-weight: 700;
 }
 .clients__slider__wrapper__item:nth-child(even)::before {
   background-image: url(../images/woman.png);

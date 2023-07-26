@@ -1,3 +1,18 @@
+// Сторінка завантаження
+
+let loadingPage = document.querySelector('.loading')
+setTimeout(() => {
+    loadingPage.style.opacity = 0
+    document.body.style.overflowY = "scroll"
+    setTimeout(() => {
+        loadingPage.style.display = 'none'
+    }, 300)
+}, 5000)
+
+
+// Події при скроллі
+// Зміна прогрес-бару
+
 window.onscroll = function () {
     let winScroll = document.body.scrollTop || document.documentElement.scrollTop
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight
@@ -5,14 +20,21 @@ window.onscroll = function () {
     document.querySelector(".header__progress-bar__progressed").style.width = scrolled + "%"
 }
 
+// Поява картинок в блоці blog
+
 window.addEventListener('scroll', function () {
     let images = document.querySelectorAll('.article-image')
     let scrollLevel = document.body.scrollTop || document.documentElement.scrollTop
     scrollLevel > 5100 && scrollLevel < 5900 ? images.forEach(image => image.style.opacity = 1) : images.forEach(image => image.style.opacity = 0)
 })
 
+
+// Здобуття даних з апі і створення блоку services
+
 const buttons = document.querySelector('.services__buttons')
 const wrapper = document.querySelector('.services__item-wrapper')
+
+// Власне здобуття даних
 
 async function getData() {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts')
@@ -20,6 +42,8 @@ async function getData() {
     const posts = data.map((post) => ({ id: post.id, title: post.title, body: post.body })).slice(0, 10)
     return posts
 }
+
+// Функція, яка генерує html до відповідної колекції
 
 function renderHTML(posts) {
     return posts.map(({ title, body }) => `
@@ -29,6 +53,8 @@ function renderHTML(posts) {
         </div>
     `).join('')
 }
+
+// Створення колекції і їх відмальовка
 
 (async function makeCollections() {
     const posts = await getData()
@@ -41,17 +67,17 @@ function renderHTML(posts) {
         architecturePosts[architecturePosts.length - 1],
         planningPosts[planningPosts.length - 1]
     ]
+    wrapper.innerHTML = renderHTML(allPosts)
+
 
     let activeButton = null
-    wrapper.innerHTML = renderHTML(allPosts)
 
     buttons.addEventListener('click', function (event) {
         let currentButton = event.target.closest('.services__buttons__button')
 
         if (currentButton === activeButton) {
             currentButton.classList.remove('services__buttons__button__active')
-            postsHTML = renderHTML(allPosts)
-            wrapper.innerHTML = postsHTML
+            wrapper.innerHTML = renderHTML(allPosts)
             activeButton = null
         } else {
             if (activeButton) activeButton.classList.remove('services__buttons__button__active')
@@ -69,8 +95,10 @@ function renderHTML(posts) {
     })
 })()
 
-function createCarousel() {
-    const carouselWrapper = document.querySelector('.clients__slider__wrapper')
+// Створення слайдеру
+
+function createSlider() {
+    const sliderWrapper = document.querySelector('.clients__slider__wrapper')
     const slides = document.querySelectorAll('.clients__slider__wrapper__item')
     const prevButton = document.querySelector('.next-button')
     const nextButton = document.querySelector('.prev-button')
@@ -82,15 +110,15 @@ function createCarousel() {
     prevButton.addEventListener('click', function () {
         if (currentPosition > 0) {
             currentPosition -= 2;
-            carouselWrapper.style.transform = `translateX(-${(currentPosition * (slideWidth + gap))}px)`
+            sliderWrapper.style.transform = `translateX(-${(currentPosition * (slideWidth + gap))}px)`
         }
     })
 
     nextButton.addEventListener('click', function () {
         currentPosition += 2
         if (currentPosition >= slides.length) currentPosition = 0
-        carouselWrapper.style.transform = `translateX(-${(currentPosition * (slideWidth + gap))}px)`
+        sliderWrapper.style.transform = `translateX(-${(currentPosition * (slideWidth + gap))}px)`
     })
 }
 
-createCarousel()
+createSlider()
