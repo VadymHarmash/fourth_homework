@@ -1,0 +1,49 @@
+.weather {
+    margin: 90px 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+
+        h2{
+            @extend %h2-style;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: 80px;
+
+        &__card{
+            @extend %image-block-style;
+            padding: 0 70px;
+            width: 25%;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-family: "Open Sans", Tahoma, Verdana, sans-serif;
+    
+            h4 {
+                color: var(--black-text);
+                font-size: 1.5em;
+                font-weight: 700;
+            }
+    
+            p{
+                @extend %p-style;
+                margin: 10px 0;
+            }
+    
+            span {
+                color: var(--grey-text);
+                font-size: 1em;
+            }
+        }
+    }
+}

@@ -1,17 +1,5 @@
 .loading{
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--white-block);
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    opacity: 1;
-    transition: all .3s;
+    @extend %temporary-pages;
     &__round{
         width: 20px;
         height: 20px;

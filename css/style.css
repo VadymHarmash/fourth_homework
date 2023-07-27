@@ -142,14 +142,14 @@ html {
   font-display: swap;
 }
 .footer__copyright, .footer__lists p,
-.footer__lists a, .shop__wrapper p, .blog__articles__article p, .clients__slider__wrapper__item p, .stats__wrapper p, .about__top p, .project__content p {
+.footer__lists a, .discount__content, .weather__cards__card p, .shop__wrapper p, .blog__articles__article p, .clients__slider__wrapper__item p, .stats__wrapper p, .about__top p, .project__content p {
   font-family: "Open Sans", Tahoma, Verdana, sans-serif;
   color: var(--grey-text);
   font-size: 1.125em;
   line-height: 166.667%;
 }
 
-.shop__wrapper h2, .blog__wrapper h2, .clients__wrapper h2, .stats__wrapper h2, .about__wrapper h2, .services h2 {
+.weather__wrapper h2, .shop__wrapper h2, .blog__wrapper h2, .clients__wrapper h2, .stats__wrapper h2, .about__wrapper h2, .services h2 {
   color: var(--black-text);
   font-family: "Poppins", Tahoma, Verdana, sans-serif;
   font-size: 3em;
@@ -180,7 +180,7 @@ html {
   color: var(--green-text);
 }
 
-.blog__articles__article__image, .about__bottom__image, .about__top__image, .project__image {
+.weather__cards__card, .blog__articles__article__image, .about__bottom__image, .about__top__image, .project__image {
   border: 2px solid var(--orange-border);
   border-radius: 140px 0px;
   width: 100%;
@@ -194,18 +194,7 @@ html {
   height: 100%;
 }
 
-@keyframes loading {
-  0% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-.loading {
+.discount, .loading {
   position: sticky;
   top: 0;
   left: 0;
@@ -219,6 +208,18 @@ html {
   gap: 20px;
   opacity: 1;
   transition: all 0.3s;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
 }
 .loading__round {
   width: 20px;
@@ -770,19 +771,18 @@ html {
   justify-content: space-between;
   align-items: center;
   gap: 100px;
-  margin-bottom: 60px;
 }
 .shop__form__name input {
   width: 100%;
 }
 .shop__form__email {
-  margin-bottom: 80px;
+  margin-top: 60px;
 }
 .shop__form__email input {
   width: 100%;
 }
 .shop__form .warnings {
-  margin: 30px 0;
+  margin: 10px 0;
   color: var(--invalid);
   font-family: "Poppins", Tahoma, Verdana, sans-serif;
   font-size: 0.8em;
@@ -793,9 +793,57 @@ html {
   line-height: 305.556%;
   cursor: pointer;
   padding: 5px 40px;
+  margin-top: 80px;
 }
 .shop__form .invalid {
   border: 1px var(--invalid) solid;
+}
+
+.weather {
+  margin: 90px 0;
+}
+.weather__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.weather__cards {
+  display: flex;
+  gap: 80px;
+}
+.weather__cards__card {
+  padding: 0 70px;
+  width: 25%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Open Sans", Tahoma, Verdana, sans-serif;
+}
+.weather__cards__card h4 {
+  color: var(--black-text);
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.weather__cards__card p {
+  margin: 10px 0;
+}
+.weather__cards__card span {
+  color: var(--grey-text);
+  font-size: 1em;
+}
+
+.discount {
+  text-align: center;
+}
+.discount__content .smile {
+  opacity: 0;
+  transition: all 0.5s;
+  font-size: 1.5em;
 }
 
 .footer {

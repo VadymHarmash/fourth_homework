@@ -1,0 +1,14 @@
+.discount {
+    @extend %temporary-pages;
+    text-align: center;
+
+    &__content {
+        @extend %p-style;
+
+        .smile{
+            opacity: 0;
+            transition: all .5s;
+            font-size: 1.5em;
+        }
+    }
+}
