@@ -35,11 +35,8 @@ function renderHTML(data) {
 Promise.all([kyivWeather, odesaWeather, kharkivWeather])
     .then(data => {
         const [kyivData, odesaData, kharkivData] = data
-        console.log(kyivData)
-        console.log(odesaData)
-        console.log(kharkivData)
-        kyivCard.innerHTML = renderHTML(kyivData)
         odesaCard.innerHTML = renderHTML(odesaData)
+        kyivCard.innerHTML = renderHTML(kyivData)
         kharkivCard.innerHTML = renderHTML(kharkivData)
     })
 

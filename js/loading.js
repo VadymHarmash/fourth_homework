@@ -7,4 +7,4 @@ setTimeout(() => {
     setTimeout(() => {
         loadingPage.style.display = 'none'
     }, 300)
-}, 1000)
+}, 5000)
