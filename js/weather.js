@@ -16,11 +16,11 @@ const kyivWeather = getWeatherData('Kyiv')
 const odesaWeather = getWeatherData('Odesa')
 const kharkivWeather = getWeatherData('Kharkiv')
 
-function renderHTML(data) {
+function renderWeatherHTML(data) {
     let weather
-    if (data.weather[0].main === 'Light rain' || data.weather[0].main === 'Rain') weather = 'rainy'
-    if (data.weather[0].main === 'Clouds') weather = 'cloudy'
-    if (data.weather[0].main === 'Sun') weather = 'sunny'
+    if (data.weather[0]['main'] === 'Light rain' || data.weather[0].main === 'Rain') weather = 'rainy'
+    if (data.weather[0]['main'] === 'Clouds') weather = 'cloudy'
+    if (data.weather[0]['main'] === 'Sun') weather = 'sunny'
 
     const source = `../../icons/${weather}.png`
 
@@ -35,9 +35,7 @@ function renderHTML(data) {
 Promise.all([kyivWeather, odesaWeather, kharkivWeather])
     .then(data => {
         const [kyivData, odesaData, kharkivData] = data
-        odesaCard.innerHTML = renderHTML(odesaData)
-        kyivCard.innerHTML = renderHTML(kyivData)
-        kharkivCard.innerHTML = renderHTML(kharkivData)
+        odesaCard.innerHTML = renderWeatherHTML(odesaData)
+        kyivCard.innerHTML = renderWeatherHTML(kyivData)
+        kharkivCard.innerHTML = renderWeatherHTML(kharkivData)
     })
-
-

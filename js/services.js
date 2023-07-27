@@ -6,15 +6,19 @@ const wrapper = document.querySelector('.services__item-wrapper')
 // Власне здобуття даних
 
 async function getData() {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-    const data = await response.json()
-    const posts = data.map((post) => ({ id: post.id, title: post.title, body: post.body })).slice(0, 10)
-    return posts
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+        const data = await response.json()
+        const posts = data.map((post) => ({ id: post.id, title: post.title, body: post.body })).slice(0, 10)
+        return posts
+    } catch (error) {
+        return console.error(`Помилка при отриманні даних: `, error)
+    }
 }
 
 // Функція, яка генерує html до відповідної колекції
 
-function renderHTML(posts) {
+function renderPostsHTML(posts) {
     return posts.map(({ title, body }) => `
         <div class='services__item-wrapper__post'>
             <h2 class='title'>TITLE: ${title}</h2>
@@ -36,7 +40,7 @@ function renderHTML(posts) {
         architecturePosts[architecturePosts.length - 1],
         planningPosts[planningPosts.length - 1]
     ]
-    wrapper.innerHTML = renderHTML(allPosts)
+    wrapper.innerHTML = renderPostsHTML(allPosts)
 
 
     let activeButton = null
@@ -46,7 +50,7 @@ function renderHTML(posts) {
 
         if (currentButton === activeButton) {
             currentButton.classList.remove('services__buttons__button__active')
-            wrapper.innerHTML = renderHTML(allPosts)
+            wrapper.innerHTML = renderPostsHTML(allPosts)
             activeButton = null
         } else {
             if (activeButton) activeButton.classList.remove('services__buttons__button__active')
@@ -54,10 +58,10 @@ function renderHTML(posts) {
             currentButton.classList.add('services__buttons__button__active')
             activeButton = currentButton
 
-            if (currentButton.classList.contains('interior')) postsHTML = renderHTML(interiorPosts)
-            if (currentButton.classList.contains('architecture')) postsHTML = renderHTML(architecturePosts)
-            if (currentButton.classList.contains('planning')) postsHTML = renderHTML(planningPosts)
-            if (currentButton.classList.contains('all-posts')) postsHTML = renderHTML(allPosts)
+            if (currentButton.classList.contains('interior')) postsHTML = renderPostsHTML(interiorPosts)
+            if (currentButton.classList.contains('architecture')) postsHTML = renderPostsHTML(architecturePosts)
+            if (currentButton.classList.contains('planning')) postsHTML = renderPostsHTML(planningPosts)
+            if (currentButton.classList.contains('all-posts')) postsHTML = renderPostsHTML(allPosts)
 
             wrapper.innerHTML = postsHTML
         }
