@@ -13,7 +13,7 @@ window.onscroll = function () {
 window.addEventListener('scroll', function () {
     let images = document.querySelectorAll('.article-image')
     let scrollLevel = document.body.scrollTop || document.documentElement.scrollTop
-    scrollLevel > 4800 && scrollLevel < 5600 ? images.forEach(image => image.style.opacity = 1) : images.forEach(image => image.style.opacity = 0)
+    scrollLevel > 5200 && scrollLevel < 6050 ? images.forEach(image => image.style.opacity = 1) : images.forEach(image => image.style.opacity = 0)
 })
 
 // Плавний перехід по анкор-посиланням
