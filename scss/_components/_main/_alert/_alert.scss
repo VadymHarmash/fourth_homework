@@ -1,0 +1,6 @@
+.alert-window{
+    @extend %temporary-pages;
+    p{
+        @extend %h2-style;
+    }
+}
