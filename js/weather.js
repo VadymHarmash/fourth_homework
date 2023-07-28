@@ -1,5 +1,6 @@
 import env from './key.env.js'
-const apiKey = env.env.apiKey
+const apiKey = process.env.API_KEY;
+// const apiKey = env.env.apiKey
 const kyivCard = document.querySelector('.weather__kyiv')
 const odesaCard = document.querySelector('.weather__odesa')
 const kharkivCard = document.querySelector('.weather__kharkiv')
