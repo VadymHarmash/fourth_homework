@@ -1,3 +1,5 @@
+// Здобуваємо потрібні дані про погоду
+
 import env from './key.env.js'
 const apiKey = env.env.apiKey
 const kyivCard = document.querySelector('.weather__kyiv')
@@ -21,7 +23,7 @@ function renderWeatherHTML(data) {
     let weather
     if (data.weather[0]['main'] === 'Light rain' || data.weather[0].main === 'Rain') weather = 'rainy'
     if (data.weather[0]['main'] === 'Clouds') weather = 'cloudy'
-    if (data.weather[0]['main'] === 'Sun') weather = 'sunny'
+    if (data.weather[0]['main'] === 'Clear') weather = 'sunny'
 
     const source = `../../icons/${weather}.png`
 

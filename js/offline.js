@@ -1,3 +1,5 @@
+// Робимо сторінку, яка закриває сайт, якщо користувач нічого не робить
+
 let timerId
 let alertWindow
 let seconds = 30
